@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+sudo tc qdisc add dev enp0s1 clsact
+sudo tc qdisc show dev enp0s1
+sudo tc filter add dev enp0s1 egress bpf da obj bpf.o  #exp /tmp/bpf
+sudo tc filter show dev enp0s1 egress

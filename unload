@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+sudo tc qdisc del dev enp0s1 clsact
+sudo tc qdisc show dev enp0s1
+sudo tc filter show dev enp0s1
+exit 0
